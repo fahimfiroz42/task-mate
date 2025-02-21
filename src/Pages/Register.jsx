@@ -11,11 +11,11 @@ import registericon from "../assets/20824344_6343825.jpg"
 import {  FaGoogle } from "react-icons/fa";
 
 import { AuthContext } from "../AuthPovider/AuthPovider";
-import useTitle from "../Hooks/useTitle";
+
 
 
 const Register = () => {
-  useTitle('Register')
+
   const navigate=useNavigate()
     const {registerUser,updateUser,googleLogin,signOutUser}=useContext(AuthContext)
     const [showPassword,setShowPassword]=useState(false)
@@ -144,15 +144,17 @@ const Register = () => {
           {showPassword?<FaEye/>:<FaEyeSlash/>}
           </button>
         </div>
-        <div className="form-control mt-6 ">
-          <button className="btn bg-primary  text-lg">Register</button>
+        <div className="form-control mt-6">
+          <button className="btn bg-primary text-lg">Register</button>
           <p className="text-sm mt-2 text-gray-500 font-semibold text-center ">Already have an account?
             <Link to={"/login"} className="text-primary pl-2 ">Login</Link></p>
             <div className="space-y-3 text-center mt-3">
             <h1 className="text-sm font-semibold text-gray-400">Or</h1>
             <button type="button" onClick={handleGoogleLogin} className="btn w-full text-lg  bg-transparent border-primary  "><FaGoogle/>Continue with Google</button>
             </div>
-
+          <div>
+            
+          </div>
         </div>
       </form>
     </div>

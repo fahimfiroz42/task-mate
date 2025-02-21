@@ -10,11 +10,11 @@ import { FaEye } from "react-icons/fa";
 import login from '../assets/4957136_4957136.jpg'
 import { AuthContext } from "../AuthPovider/AuthPovider";
 
-import useTitle from "../Hooks/useTitle";
+
 
 
 const Login = () => {
-  useTitle('Login')
+ 
  
   const navigate =useNavigate()
   const [email, setEmail] = useState('')
@@ -99,12 +99,12 @@ const Login = () => {
             <h1 className="text-2xl font-bold text-center ">Welcome Back</h1>
         </div>
       <form className="card-body " onSubmit={handleSubmit}>
-        <div className="form-control">
-          <label className="label">
+        <fieldset className="fieldset">
+          <label className="fieldset-label">
             <span className="label-text">Email</span>
           </label>
           <input  name="email" value={email} onChange={(e)=>setEmail(e.target.value)} type="email" placeholder="Enter Email" className="input input-bordered"  />
-        </div>
+        </fieldset>
         <div className="form-control relative">
           <label className="label">
             <span className="label-text">Password</span>
