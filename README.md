@@ -73,3 +73,14 @@ Make sure you have the following installed:
 | **bcrypt.js** 🔒 | Password hashing |
 | **Multer** 📂 | File uploads |
 
+
+
+## ✨ Contributing
+Feel free to contribute! Fork the repository, create a new branch, and submit a PR with your changes.
+
+## 📄 License
+This project is licensed under the **MIT License**.
+
+---
+
+💡 _Stay organized and productive with TaskMate!_ 🚀
