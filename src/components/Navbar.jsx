@@ -4,7 +4,7 @@ import { AuthContext } from "../AuthPovider/AuthPovider";
 
 
 const Navbar = () => {
-   const {user}=useContext(AuthContext)
+   const {user,signOutUser}=useContext(AuthContext)
     return (
        <div className="container mx-auto ">
          <div className="navbar bg-base-100 shadow-sm">
@@ -18,6 +18,7 @@ const Navbar = () => {
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
               <li><NavLink to='/'>Home</NavLink></li>
               <li><NavLink to={'/add-task'}>Add Task</NavLink></li>
+              <li><NavLink to={'/manage-task'}>Manage Task</NavLink></li>
             </ul>
           </div>
           <img src="/favicon.ico" alt="" className="w-12 h-12" />
@@ -27,10 +28,11 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1 font-semibold text-gray-500 ">
           <li ><NavLink to='/'>Home</NavLink></li>
           <li><NavLink to={'/add-task'}>Add Task</NavLink></li>
+          <li><NavLink to={'/manage-task'}>Manage Task</NavLink></li>
           </ul>
         </div>
         <div className="navbar-end">
-          {user?<Link   className="btn bg-blue-500 text-white">Logout</Link>: <Link  to="/login" className="btn bg-blue-500 text-white">Login</Link>}
+          {user?<button onClick={signOutUser}   className="btn bg-blue-500 text-white">Logout</button>:''}
           
         </div>
       </div>

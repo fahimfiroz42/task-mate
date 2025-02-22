@@ -37,7 +37,7 @@ const Banner = () => {
     return (
         <div
         className="hero min-h-[calc(100vh-65px)] "
-        style={{
+       style={{
           backgroundImage: "url(https://i.ibb.co.com/9HjBPD0z/34544.jpg)",
         }}>
         <div className="hero-overlay"></div>

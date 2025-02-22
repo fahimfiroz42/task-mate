@@ -1,12 +1,18 @@
-import React from 'react';
-import Taskui from '../components/Taskui';
+import { useContext } from 'react';
 import Banner from '../components/Banner';
+import { AuthContext } from '../AuthPovider/AuthPovider';
+import SecondBanner from '../components/SecondBanner';
 
 const Home = () => {
+    const {user}=useContext(AuthContext)
     return (
         <div>
-            <Banner/>
+            {
+                user?<SecondBanner/>:<Banner/>
           
+            }
+
+            
             
         </div>
     );

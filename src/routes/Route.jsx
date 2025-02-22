@@ -5,10 +5,11 @@ import {
   } from "react-router-dom";
 import MainLAyout from "../layout/MainLAyout";
 import Error from "../Pages/Error";
-import Login from "../Pages/Login";
-import Register from "../Pages/Register";
+
 import AddTaskForm from "../Pages/AddTaskForm";
 import Home from "../Pages/Home";
+import ManageTask from "../Pages/ManageTask";
+import PrivateRoute from "../PrivateRoute/PrivateRoute";
 const Route =createBrowserRouter([
     {
       path: "/",
@@ -20,17 +21,12 @@ const Route =createBrowserRouter([
           element:<Home/>
         },
         {
-          path:'/login',
-          element:<Login/>
-        },
-        {
-          path:'/register',
-          element:<Register/>
-
-        },
-        {
           path:'/add-task',
-          element:<AddTaskForm/>
+          element:<PrivateRoute><AddTaskForm/></PrivateRoute>
+        },
+        {
+          path:'/manage-task',
+          element:<PrivateRoute><ManageTask/></PrivateRoute>
         }
       ]
       

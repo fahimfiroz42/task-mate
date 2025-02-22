@@ -57,11 +57,7 @@ const AuthContextProvider = ({children}) => {
         const unsubscribe=onAuthStateChanged(auth,currentUser=>{
             if(currentUser){
                 setUser(currentUser)
-
-                .then(res=>console.log(res.data))
-
-
-                setLoading(false)
+               setLoading(false)
                 
             }
             else{
