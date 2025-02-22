@@ -37,7 +37,7 @@ export default function AddTaskForm() {
       userEmail:user?.email,
       userName:user?.displayName
     };
-    const {data}=await axios.post('http://localhost:5000/tasks',newTask)
+    const {data}=await axios.post('https://task-mate-server-alpha.vercel.app/tasks',newTask)
     console.log(data);
     if(data.insertedId){
     Swal.fire({

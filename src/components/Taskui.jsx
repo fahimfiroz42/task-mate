@@ -19,7 +19,7 @@ const Taskui = () => {
     queryKey: ["tasks", user?.email],
     queryFn: async () => {
       if (!user?.email) return [];
-      const { data } = await axios.get(`http://localhost:5000/tasks?email=${user.email}`);
+      const { data } = await axios.get(`https://task-mate-server-alpha.vercel.app/tasks?email=${user.email}`);
       setTasks(data);
       return data;
     },
@@ -29,7 +29,7 @@ const Taskui = () => {
   if (isLoading) return <Loading />;
 
   const handleDelete = async (id) => {
-    const { data } = await axios.delete(`http://localhost:5000/tasks/${id}`);
+    const { data } = await axios.delete(`https://task-mate-server-alpha.vercel.app/tasks/${id}`);
     if (data.deletedCount > 0) {
       Swal.fire("Deleted!", "Your task has been deleted.");
       refetch();
@@ -47,7 +47,7 @@ const Taskui = () => {
       setTasks([...tasks]);
 
       try {
-        await axios.patch(`http://localhost:5000/tasks/${movedTask._id}`, {
+        await axios.patch(`https://task-mate-server-alpha.vercel.app/tasks/${movedTask._id}`, {
           category: destinationCategory,
         });
         refetch();
@@ -69,7 +69,7 @@ const Taskui = () => {
     const updatedCategory = e.target.category.value; // Get selected category
 
     try {
-      await axios.put(`http://localhost:5000/tasks/${selectedTask._id}`, {
+      await axios.put(`https://task-mate-server-alpha.vercel.app/tasks/${selectedTask._id}`, {
         title: updatedTitle,
         description: updatedDescription,
         category: updatedCategory, // Send new category to backend

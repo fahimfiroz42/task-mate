@@ -1,8 +1,75 @@
-# React + Vite
+# 📝 TaskMate - Task Management App  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🌟 Short Description  
+TaskMate is a modern task management app designed to help you stay organized and focused on your goals. With intuitive drag-and-drop functionality, prioritization, and real-time task updates, TaskMate makes productivity seamless.  
 
-Currently, two official plugins are available:
+## 🌍 Live Links  
+🔗 [Live Demo](https://taskmateplus.netlify.app/)  
+🔗 [Backend Repository](https://your-backend-repo-link.com)  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📦 Dependencies  
+- React ⚛️  
+- Tailwind CSS 🎨  
+- React Query ⚡  
+- Axios 🌐  
+- Express.js 🚀  
+- MongoDB 🗄️  
+
+### 🔥 Features  
+✅ **Drag & Drop** - Easily move tasks between categories  
+✅ **Task Prioritization** - Organize tasks based on importance  
+✅ **Real-time Updates** - Keep track of task changes instantly  
+✅ **Modern UI** - Sleek and responsive design with Tailwind CSS  
+✅ **Secure Authentication** - Firebase for user authentication  
+✅ **Fast & Lightweight** - Built with the MERN stack for performance 
+
+## 🛠 Installation Guide  
+
+### 🔹 Prerequisites  
+Make sure you have the following installed:  
+- **Node.js** (v16+) 🟢  
+- **MongoDB** (local or cloud) 🍃  
+- **Git** (for cloning the repository) 🛠  
+
+1. **Clone the Frontend Repository**  
+   ```sh
+   git clone https://github.com/your-repo/taskmate.git
+   cd taskmate
+
+2. **Install Dependencies**  
+   ```sh
+   npm install
+
+3. **Create a .env File for Firebase & API URL**  
+   ```sh
+   VITE_API_URL=http://localhost:5000
+   VITE_FIREBASE_API_KEY=your_firebase_api_key
+
+
+## 📦 Dependencies  
+
+### 🔹 Frontend  
+| Package | Description |
+|---------|------------|
+| **React** ⚛️ | Frontend UI Library |
+| **React Router** 🚏 | Navigation and Routing |
+| **Tailwind CSS** 🎨 | Utility-first CSS framework |
+| **React Query** ⚡ | Server-state management |
+| **Axios** 🌐 | HTTP requests |
+| **Firebase** 🔐 | Authentication |
+| **Moment.js** 🕒 | Date formatting |
+| **Lucide-react** 🎨 | Icons |
+
+### 🔹 Backend  
+| Package | Description |
+|---------|------------|
+| **Node.js** 🚀 | JavaScript runtime |
+| **Express.js** 🏗️ | Web framework for Node.js |
+| **MongoDB** 🍃 | NoSQL Database |
+| **Mongoose** 📄 | MongoDB ODM |
+| **Cors** 🌍 | Cross-Origin Resource Sharing |
+| **Dotenv** 🔐 | Environment Variables |
+| **jsonwebtoken (JWT)** 🔑 | User authentication |
+| **bcrypt.js** 🔒 | Password hashing |
+| **Multer** 📂 | File uploads |
+

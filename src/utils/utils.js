@@ -2,7 +2,7 @@ import axios from "axios"
 
 export const saveUser=async(user)=>{
     
-    axios.post(`http://localhost:5000/users/${user?.email}`,{name:user?.displayName,
+    axios.post(`https://task-mate-server-alpha.vercel.app/users/${user?.email}`,{name:user?.displayName,
         image:user?.photoURL,
         email:user?.email,
         role:'user'
